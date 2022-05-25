@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFSql.View.InvestidorView">
+    <ContentPage.Content>
+        <StackLayout Padding="30">
+            <Label Text="Investidor" FontSize="Large" />
+            <Label Text="" />
+            <Label Text="Nome:" />
+            <Entry Placeholder="Digite o nome" x:Name="EntryNome" Text="" />
+            <Label Text="Email:" />
+            <Entry Placeholder="Digite o nome" x:Name="EntryEmail" Text="" Keyboard="Email" />
+            <Button Text="Gravar" Clicked="Button_Clicked"/>
+            <Label Text="Todos Investidores" HorizontalOptions="Start" FontSize="Medium"/>
+            <ListView        
+                x:Name="ListViewInvestidor"
+                VerticalOptions="Fill"                
+                HeightRequest="400"                
+                HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HeightRequest="50" Padding="5">
+                                <Label FontSize="Medium" Text="{Binding NomeInvestidor}" FontAttributes="Bold"/>
+                                <Label FontSize="Medium" Text="{Binding EmailInvestidor}" FontAttributes=" Italic"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

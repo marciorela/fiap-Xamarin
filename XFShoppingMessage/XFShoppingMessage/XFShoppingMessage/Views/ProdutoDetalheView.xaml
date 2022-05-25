@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"             
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             x:Class="XFShoppingMessage.Views.ProdutoDetalheView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#ff6a00</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <StackLayout Margin="0" Padding="0">
+                    <ContentView>
+                        <Image Source="https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/1695f856-9429-4917-8397-58d126a5fa98-en}" />
+                    </ContentView>
+                </StackLayout>
+            </StackLayout>
+            <ScrollView Grid.Row="1">
+                <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+                    <Label Text="Nome do Produto" x:Name="LabelNome" FontAttributes="Bold" FontSize="22" />
+                    <Label Text="Descrição: " FontAttributes="Bold" />
+                    <Label Text="Aqui vai a descrição do produto" />
+                    <Label Text="SKU: " FontAttributes="Bold" />
+                    <Label Text="000-00000-00000" />
+                    <Button BackgroundColor="Black" HeightRequest="1" />
+                    <Button Text="Adicionar" Clicked="Button_Clicked" TextColor="Black" BackgroundColor="#03ACEF" FontSize="Large"></Button>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
